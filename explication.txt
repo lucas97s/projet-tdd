@@ -1,0 +1,18 @@
+Lucas Schott:   Projet de Technique de Développement, jeu de la vie
+
+Pour creer les parties "cyclique" et "vieillissante", j'ai modifié le prototype de la fonction elovue en y ajoutant les arguments "int cyclique" et "int vieillssement",
+en cliquant sur les touches c et v, cela change la valeur de ces variables, la fonction evolue va donc agir de maniere differente sur la grille selon les valeurs de ces arguments.
+Pour la partie observant les ocillation de la grille, j'ai creer une fonction qui creer une copie de la grille courante, et qui fait une boucle sur celle ci,
+en la faisant évoluer jusqu'à ce qu'on retombre sur la grille de départ qui a été copié, ou alors on s'arret à 100 iterations et on considere que la grille n'est pas oscillante.
+Ce qui a été le plus dur; c'était d"utiliser cairo et x11, j'ai utilisé de nombreux sites web pour comprendre comment utiliser les événements sur x11, et comment utiliser cairo,
+je me suis beaucoup inspiré de "exemple.c" pour initialiser la fenetre et les surfaces, et pour creer des rectangle.
+Le makefile a aussi été l'objet de nombreuses recherches pour les différentes obtions etc. et gcc aussi pour compiler une librairie statique.
+Il y a juste un probleme que je n'ai pas réussi à résoudre, est concernant les fuites mémoires:
+Quand je compile la version TEXTE, je n'ai aucune fuite mémoire, je libère bien toute la mémoire que j'ai alloué,
+par comtre il y a un gros problème des que je compile en mode graphique, où quand je passe valgrind j'ai plus de 10.000 alloucations réalisés
+dont seulement 5.000 sont libéré, ce qui fait une fuite de mémoire de plus de 0.2Mo à chaque fois qu'on execute le programme en mode graphique.
+J'ai utilisé valgrind avec les options --leak-check=full et --show-leak-kind=all cela me montre une grande liste d'allocation non libérés, mais toutes sont internes à cairo ou x11,
+et je n'ai aucun moyen de les libérer.
+Au finale j'ai réussi toutes les étapes relativement bien, et toutes les fonctionnalités de ce projet sont opérationnels.
+Ce projet a été tres enrichissant, il m'a permis de bien comprendre les makefiles et les outils pour aider au developpement et au débugage,
+et d'utiliser une bibliotheque graphique. 
