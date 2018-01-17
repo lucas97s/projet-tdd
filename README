@@ -25,6 +25,7 @@ le programme peut etre compilé de deux manières différentes:
 Utilisation:
 -------------------------------------------------------------------------------
 
+
 $ main <fichier grille>
 
 une fois dans le programme:
@@ -36,6 +37,8 @@ une fois dans le programme:
         100.
     - entrer q en mode  terminal pour quitter, clique droit en mode graphique
         pour quitter.
+
+des grilles des teste sont disponible dans le répertoire grilles/
 
 
 
