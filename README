@@ -73,9 +73,4 @@ graphique. J'ai utilisé valgrind avec les options --leak-check=full et
 mais toutes sont internes à cairo ou x11, et je n'ai aucun moyen de les
 libérer.
 
-Au finale j'ai réussi toutes les étapes relativement bien, et toutes
-les fonctionnalités de ce projet sont opérationnels. Ce projet a été tres
-enrichissant, il m'a permis de bien comprendre les makefiles et les outils pour
-aider au developpement et au débugage, et d'utiliser une bibliotheque graphique. 
-
 Auteur: Lucas SCHOTT
